@@ -1,0 +1,15 @@
+<p>main works!</p>
+<input [(ngModel)]="name" required>
+<button (click)="onSearch()">Search</button>
+<ul>
+  <li *ngFor="let product of products">
+    {{product.name}}
+  </li>
+</ul>
+<p *ngIf="!products.length">No results</p>
+<h3>Сортирка по возрастанию</h3>
+<p>{{getSortedAsc()}}</p>
+<h3>Сортирка по убыванию</h3>
+<p>{{getSortedDesc()}}</p>
+<h3>Максимальное число из массива</h3>
+<p>{{getMax()}}</p>
